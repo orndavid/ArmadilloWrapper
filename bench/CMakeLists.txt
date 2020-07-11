@@ -1,0 +1,5 @@
+include(GoogleTest)
+enable_testing()
+find_package(benchmark REQUIRED)
+add_executable(bench init.cpp)
+target_link_libraries(bench benchmark::benchmark ${lib_name})
